@@ -71,7 +71,8 @@
             "7bdac0345f2d726d",
             "cee40702d7c80195",
             "76a48c26b1688552",
-            "e5c2c72c8d98e1db"
+            "e5c2c72c8d98e1db",
+            "0904e70e92a9dbcc"
         ],
         "x": 34,
         "y": 299,
@@ -1127,6 +1128,17 @@
         "name": "",
         "info": "Escritura a la planta del sistema de forma local y remota",
         "x": 170,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0904e70e92a9dbcc",
+        "type": "comment",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "",
+        "info": "Escritura a la planta del sistema de forma local y remota",
+        "x": 380,
         "y": 360,
         "wires": []
     }
