@@ -70,7 +70,8 @@
             "ce084a61d788b557",
             "7bdac0345f2d726d",
             "cee40702d7c80195",
-            "76a48c26b1688552"
+            "76a48c26b1688552",
+            "e5c2c72c8d98e1db"
         ],
         "x": 34,
         "y": 299,
@@ -1116,6 +1117,17 @@
         "color": "#000000",
         "x": 1010,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e5c2c72c8d98e1db",
+        "type": "comment",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "",
+        "info": "Escritura a la planta del sistema de forma local y remota",
+        "x": 170,
+        "y": 360,
         "wires": []
     }
 ]
