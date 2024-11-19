@@ -1,1 +1,1121 @@
-[]
+[
+    {
+        "id": "d3bafc4d888d1327",
+        "type": "tab",
+        "label": "Planta Local",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e80ba914f330e4bf",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "name": "Ingreso de Datos HMI",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "6affae2739636fd4",
+            "e80a19e4ef29647c",
+            "ef27165957a2a7ce",
+            "9837c6631b22c877",
+            "497bb3a5985ccf6a",
+            "43afa594f96c4de1",
+            "b31d9258d5457c6b",
+            "d01294d76e015e0e",
+            "2597d26d4122589d"
+        ],
+        "x": 34,
+        "y": 39,
+        "w": 852,
+        "h": 242
+    },
+    {
+        "id": "214bb5bb7c3c748a",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "name": "Grafica de Tendencia",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2cc3886a218bfd36",
+            "bacdb831509bd076",
+            "5e13ef0e251ac89f",
+            "86657a338622ef8d",
+            "b577870f2cd9ac34",
+            "b1fa050b3d65483f",
+            "13c685b07e0ef3f5",
+            "b83f462fe9fc336a"
+        ],
+        "x": 894,
+        "y": 39,
+        "w": 592,
+        "h": 182
+    },
+    {
+        "id": "4e95e1e89e159a2c",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "name": "Planta",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "3dfcc44a8bb60a4c",
+            "a66b3bd8b9f29456",
+            "ce084a61d788b557",
+            "7bdac0345f2d726d",
+            "cee40702d7c80195",
+            "76a48c26b1688552"
+        ],
+        "x": 34,
+        "y": 299,
+        "w": 1072,
+        "h": 162
+    },
+    {
+        "id": "46ca1a28cf2e749b",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "name": "MQTT Protocolo",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "c1a6fea6327391ca",
+            "5c23878488aed3ae"
+        ],
+        "x": 28,
+        "y": 473,
+        "w": 1244,
+        "h": 234
+    },
+    {
+        "id": "e693d1e88a08e6de",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "name": "Eliminar Variables",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "abeb3817066df2d9",
+            "a5a1e82fc248037c"
+        ],
+        "x": 34,
+        "y": 739,
+        "w": 402,
+        "h": 82
+    },
+    {
+        "id": "c1a6fea6327391ca",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "g": "46ca1a28cf2e749b",
+        "name": "Enviar data a la Nube",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "6b4aadc25a0128ce",
+            "ccad51975c96c09f",
+            "e0a986db8a783db1",
+            "0d5261c134f74a45",
+            "8df15cca59401082"
+        ],
+        "x": 54,
+        "y": 499,
+        "w": 652,
+        "h": 142
+    },
+    {
+        "id": "5c23878488aed3ae",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "g": "46ca1a28cf2e749b",
+        "name": "Recepcion de Data en la nube",
+        "style": {
+            "label": true,
+            "stroke": "#000000",
+            "color": "#000000"
+        },
+        "nodes": [
+            "6ef40822acc1f687",
+            "c07e0ab3c77a38dd",
+            "82f9927c64ddf655",
+            "8bd789448cb5ebb2",
+            "26b63247279de23d"
+        ],
+        "x": 714,
+        "y": 499,
+        "w": 532,
+        "h": 182
+    },
+    {
+        "id": "5aaaf04bcb7e61c3",
+        "type": "ui_tab",
+        "name": "Principal",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "83028f5fc4af6c91",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a6eb8721741008d0",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "b0b5f6d17e4ee7ed2f3d765054e8785e02f5583d8b130eef6e704d8fd403d4ae-certificate.pem.crt",
+        "keyname": "b0b5f6d17e4ee7ed2f3d765054e8785e02f5583d8b130eef6e704d8fd403d4ae-private.pem.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "2cfeb892b2531fe4",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "a2jc4862ggr0zs-ats.iot.us-east-2.amazonaws.com",
+        "port": "8883",
+        "tls": "a6eb8721741008d0",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d656154329cc3bca",
+        "type": "ui_group",
+        "name": "Pantalla",
+        "tab": "5aaaf04bcb7e61c3",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "48d7616710ecee0d",
+        "type": "ui_group",
+        "name": "Configuracion",
+        "tab": "5aaaf04bcb7e61c3",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2cc3886a218bfd36",
+        "type": "ui_chart",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "",
+        "group": "d656154329cc3bca",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Tendencia",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "450",
+        "removeOlder": "3",
+        "removeOlderPoints": "200",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0000",
+            "#0080ff",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1370,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bacdb831509bd076",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "Limpiar Grafica",
+        "func": "msg.payload = []\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 180,
+        "wires": [
+            [
+                "2cc3886a218bfd36"
+            ]
+        ]
+    },
+    {
+        "id": "5e13ef0e251ac89f",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1050,
+        "y": 140,
+        "wires": [
+            [
+                "bacdb831509bd076"
+            ]
+        ]
+    },
+    {
+        "id": "86657a338622ef8d",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "Grafica",
+        "func": "// adquision de variables\nvar setPoint_Presion = global.get('setPoint_Presion')||-2;\nvar presion = global.get('presion')||-2;\nif(setPoint_Presion != -2 && presion != -2){\n    var msg = {};\n    var msg1 = {};\n    msg.payload = setPoint_Presion;\n    msg.topic = 'SetPoint Presión';\n    msg1.payload = presion;\n    msg1.topic = 'Presión';\n    node.status({fill:\"green\",shape:\"dot\",text:setPoint_Presion + ' psi'});\n    return [msg, msg1];\n}else {\n    node.status({fill:\"red\",shape:\"dot\",text:\"No Data\"});\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 80,
+        "wires": [
+            [
+                "2cc3886a218bfd36",
+                "13c685b07e0ef3f5"
+            ],
+            [
+                "2cc3886a218bfd36",
+                "b83f462fe9fc336a"
+            ]
+        ]
+    },
+    {
+        "id": "b577870f2cd9ac34",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "",
+        "props": [],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1050,
+        "y": 80,
+        "wires": [
+            [
+                "86657a338622ef8d"
+            ]
+        ]
+    },
+    {
+        "id": "b1fa050b3d65483f",
+        "type": "ui_button",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "",
+        "group": "d656154329cc3bca",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Limpiar Tendencia",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1010,
+        "y": 180,
+        "wires": [
+            [
+                "bacdb831509bd076"
+            ]
+        ]
+    },
+    {
+        "id": "6affae2739636fd4",
+        "type": "ui_slider",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "",
+        "label": "SetPoint de Presión",
+        "tooltip": "",
+        "group": "48d7616710ecee0d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "100",
+        "max": "400",
+        "step": "1",
+        "className": "",
+        "x": 440,
+        "y": 80,
+        "wires": [
+            [
+                "9837c6631b22c877",
+                "497bb3a5985ccf6a"
+            ]
+        ]
+    },
+    {
+        "id": "e80a19e4ef29647c",
+        "type": "ui_button",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "",
+        "group": "48d7616710ecee0d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Aceptar",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "green",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 400,
+        "y": 160,
+        "wires": [
+            [
+                "43afa594f96c4de1",
+                "b31d9258d5457c6b"
+            ]
+        ]
+    },
+    {
+        "id": "ef27165957a2a7ce",
+        "type": "ui_button",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "",
+        "group": "48d7616710ecee0d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Rechazar",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "b31d9258d5457c6b"
+            ]
+        ]
+    },
+    {
+        "id": "d01294d76e015e0e",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "Inicializar Variables",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "2597d26d4122589d",
+                "b31d9258d5457c6b"
+            ]
+        ]
+    },
+    {
+        "id": "2597d26d4122589d",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "function 2",
+        "func": "var setPoint_Presion = global.get('setPoint_Presion')||-2;\nif(setPoint_Presion == -2){\n    global.set('setPoint_Presion',200);\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9837c6631b22c877",
+        "type": "change",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SetPoint_PID_Presion_AUX",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "497bb3a5985ccf6a",
+        "type": "ui_text",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "group": "48d7616710ecee0d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SetPoint Text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "43afa594f96c4de1",
+        "type": "change",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "setPoint_Presion",
+                "pt": "global",
+                "to": "SetPoint_PID_Presion_AUX",
+                "tot": "flow",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b31d9258d5457c6b",
+        "type": "change",
+        "z": "d3bafc4d888d1327",
+        "g": "e80ba914f330e4bf",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "setPoint_Presion",
+                "tot": "global",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 80,
+        "wires": [
+            [
+                "6affae2739636fd4"
+            ]
+        ]
+    },
+    {
+        "id": "13c685b07e0ef3f5",
+        "type": "debug",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1370,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "b83f462fe9fc336a",
+        "type": "debug",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3dfcc44a8bb60a4c",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "1s",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 420,
+        "wires": [
+            [
+                "a66b3bd8b9f29456"
+            ]
+        ]
+    },
+    {
+        "id": "6b4aadc25a0128ce",
+        "type": "mqtt out",
+        "z": "d3bafc4d888d1327",
+        "g": "c1a6fea6327391ca",
+        "name": "",
+        "topic": "device/MQTTBroker/entrada",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2cfeb892b2531fe4",
+        "x": 560,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ccad51975c96c09f",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "c1a6fea6327391ca",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 580,
+        "wires": [
+            [
+                "e0a986db8a783db1"
+            ]
+        ]
+    },
+    {
+        "id": "e0a986db8a783db1",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "c1a6fea6327391ca",
+        "name": "Estructurar Data",
+        "func": "// adquision de variables globales\nvar presion = global.get('presion')||0;\nvar setPoint_Presion = global.get('setPoint_Presion')||0;\n\nvar ctr = context.get('ctr', 'memoryOnly') || 0;\nctr++;\nif (ctr > 10) {\n    ctr = 0;\n}\nnode.status({ fill: \"red\", shape: \"ring\", text: \"ctr \" + ctr });\ncontext.set('ctr', ctr, 'memoryOnly');\n\nmsg = {\n    'payload':{\n        presion,\n        setPoint_Presion,\n        ctr\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "0d5261c134f74a45",
+                "6b4aadc25a0128ce"
+            ]
+        ]
+    },
+    {
+        "id": "0d5261c134f74a45",
+        "type": "debug",
+        "z": "d3bafc4d888d1327",
+        "g": "c1a6fea6327391ca",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 500,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "8df15cca59401082",
+        "type": "comment",
+        "z": "d3bafc4d888d1327",
+        "g": "c1a6fea6327391ca",
+        "name": "",
+        "info": "tutoriales de donde se saco\nhttps://www.youtube.com/watch?v=oedCiDnIV14&list=PL5_Rrj9tYQAml3cNxw4rlAJL-QyEoNG8b&index=6",
+        "x": 160,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "6ef40822acc1f687",
+        "type": "mqtt in",
+        "z": "d3bafc4d888d1327",
+        "g": "5c23878488aed3ae",
+        "name": "",
+        "topic": "device/MQTTBroker/entradaNUBE",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2cfeb892b2531fe4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "c07e0ab3c77a38dd",
+                "82f9927c64ddf655"
+            ]
+        ]
+    },
+    {
+        "id": "c07e0ab3c77a38dd",
+        "type": "debug",
+        "z": "d3bafc4d888d1327",
+        "g": "5c23878488aed3ae",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "82f9927c64ddf655",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "5c23878488aed3ae",
+        "name": "Guardar Data",
+        "func": "var data = msg;\nvar ctr = data.payload.ctr\ncontext.set('monitoreo', data, 'memoryOnly');\nglobal.set('ctr', ctr, 'memoryOnly');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8bd789448cb5ebb2",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "5c23878488aed3ae",
+        "name": "",
+        "props": [],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 810,
+        "y": 640,
+        "wires": [
+            [
+                "26b63247279de23d"
+            ]
+        ]
+    },
+    {
+        "id": "26b63247279de23d",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "5c23878488aed3ae",
+        "name": "Status Server",
+        "func": "//adquision del valor de contador\nvar ctr = global.get('ctr','memoryOnly') || 0;\nvar ctr1 = context.get('ctr1')||0;\nvar ctr2 = context.get('ctr2')||0;\nvar ctr3 = context.get('ctr3')||0;\nvar statusServer = false;\n\n// identificacion de status del servidor\nif (ctr != ctr1 && ctr != ctr2 && ctr != ctr3){\n    statusServer = true;\n}\n\n//condiciones del colore\nvar color = 'red';\nif(statusServer){\n    color = 'green';\n}\n\n\nnode.status({ fill: color, shape: \"ring\", text: ' status Server ' + statusServer + \" ctr \" + ctr });\n// guardando los estados anteriores\ncontext.set('ctr3',ctr2);\ncontext.set('ctr2',ctr1);\ncontext.set('ctr1',ctr);\n//guardando el estado de status server\nglobal.set('statusServer',statusServer,'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a66b3bd8b9f29456",
+        "type": "switch",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "status Server",
+        "property": "#:(memoryOnly)::statusServer",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 380,
+        "y": 420,
+        "wires": [
+            [
+                "7bdac0345f2d726d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ce084a61d788b557",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "Planta Real",
+        "func": "// definicion de variables internas de la discretizacion\nvar uk = msg.payload;//Conversion de frecuencia de entrada\nvar yk1 = flow.get('Planta.yk1','memoryOnly')||0;\nvar yk2 = flow.get('Planta.yk2','memoryOnly')||0;\n\nvar uk1 = flow.get('Planta.uk1','memoryOnly')||0;\nvar uk2 = flow.get('Planta.uk2','memoryOnly')||0;\n\n// var yk = 0.0417*uk + 0.0833*uk1 + 0.0417*uk2 + 0.3333*yk1 + 0*yk2 ; // con tiempo de 1s\nvar yk = 60e3*uk + 120e3*uk1 + 60e3*uk2 + 0.33333*yk1 -0*yk2 ; // con tiempo de 1s\nyk = acotarADecimales(yk,4);\nmsg.payload = yk;//enviar a HMI\n//guardar los estados anterirores\nvar Planta = { yk2:yk1,yk1:yk,uk2:uk1,uk1:uk};\nflow.set('Planta',Planta,'memoryOnly');\n\nnode.status({fill:\"blue\",shape:\"dot\",text:\"PIP \" + yk});\nglobal.set('presion',yk);\n\nfunction acotarADecimales(num, decimales = 4) {\n    return parseFloat(num.toFixed(decimales));\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 380,
+        "wires": [
+            [
+                "76a48c26b1688552"
+            ]
+        ]
+    },
+    {
+        "id": "7bdac0345f2d726d",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "PID",
+        "func": "// traer los parametros globales\nvar reference = global.get('setPoint_Presion') || 0;  // Valor deseado (referencia)\nvar output = global.get('presion') || 0;  //// Salida inicial del sistema\n\n//Traer los parametros anteriores\nvar uk = Math.abs(reference- output);//entrada del sistema \nvar uk1 = flow.get('uk1')||0;\nvar yk = 0;\nvar yk1 = flow.get('yk1')||0;\n\n// % Parámetros del controlador PID\nvar Kp = 5.27e-6;\nvar Ki = 5.15e-6;\nvar Kd = 1.14e-6;\nvar Tf = 0.00619;\nvar T = 1; //% Tiempo de muestreo(s)\n\n\n// % Término Proporcional\nvar b0_p = Kp;\n\n// % Término Integral\nvar b0_i = Ki * T / 2;\nvar b1_i = Ki * T / 2;\n\n// % Término Derivativo\nvar b0_d = 2 * Kd / T;\nvar b1_d = -2 * Kd / T;\nvar a1_d = (1 - Tf * 2 / T) / (1 + Tf * 2 / T);\n\n// % Proporcional\nvar y_p = b0_p * uk;\n    \n// % Integral\nvar y_i = b0_i * uk + b1_i * uk1 + yk1;\n\n//     % Proporcional\ny_p = b0_p * uk;\n\n// % Integral\ny_i = b0_i * uk + b1_i * uk1 + yk;\n\n\n// % Derivativo\nvar y_d = b0_d * uk + b1_d * uk1 - a1_d * yk;\n\n// % Salida total\nyk = y_p + y_i + y_d;\nmsg.payload = yk;\n//visualizacion de nodo\nnode.status({fill:\"blue\",shape:\"dot\",text:\"PID\" + yk});\nflow.set('yk1',yk);\nflow.set('uk1',uk);\ncontext.set('monitoreo', { ctsProporcional: { b0_p }, ctsIntegrales: { b0_i, b1_i }, ctsDerivativas: { b0_d, b1_d, a1_d}},'memoryOnly');\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "ce084a61d788b557"
+            ]
+        ]
+    },
+    {
+        "id": "cee40702d7c80195",
+        "type": "comment",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "PID Matlab",
+        "info": "% Parámetros del controlador PID\nKp = 5.27e-6;\nKi = 5.15e-6;\nKd = 1.14e-6;\nTf = 0.00619;\nT = 1; % Tiempo de muestreo (s)\n\n% Término Proporcional\nb0_p = Kp;\n\n% Término Integral\nb0_i = Ki * T / 2;\nb1_i = Ki * T / 2;\n\n% Término Derivativo\nb0_d = 2 * Kd / T;\nb1_d = -2 * Kd / T;\na1_d = (1 - Tf * 2 / T) / (1 + Tf * 2 / T);\n\n% Simulación del sistema con entrada escalón\nN = 100; % Número de muestras\nu = ones(1, N); % Entrada escalón\ny = zeros(1, N); % Salida inicializada\n\nfor k = 2:N\n    % Proporcional\n    y_p = b0_p * u(k);\n    \n    % Integral\n    if k > 1\n        y_i = b0_i * u(k) + b1_i * u(k-1) + y(k-1);\n    else\n        y_i = 0;\n    end\n    \n    % Derivativo\n    if k > 1\n        y_d = b0_d * u(k) + b1_d * u(k-1) - a1_d * y(k-1);\n    else\n        y_d = 0;\n    end\n    \n    % Salida total\n    y(k) = y_p + y_i + y_d;\nend\n\n% Graficar la respuesta\nfigure;\nplot(1:N, y, 'b', 'LineWidth', 1.5);\ntitle('Respuesta del Controlador PID Discreto');\nxlabel('Muestras (k)');\nylabel('Salida y[k]');\ngrid on",
+        "x": 600,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "abeb3817066df2d9",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "e693d1e88a08e6de",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 780,
+        "wires": [
+            [
+                "a5a1e82fc248037c"
+            ]
+        ]
+    },
+    {
+        "id": "a5a1e82fc248037c",
+        "type": "change",
+        "z": "d3bafc4d888d1327",
+        "g": "e693d1e88a08e6de",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "presion",
+                "pt": "global"
+            },
+            {
+                "t": "delete",
+                "p": "uk1",
+                "pt": "flow"
+            },
+            {
+                "t": "delete",
+                "p": "yk1",
+                "pt": "flow"
+            },
+            {
+                "t": "delete",
+                "p": "#:(memoryOnly)::Planta",
+                "pt": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "76a48c26b1688552",
+        "type": "ui_text",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "group": "48d7616710ecee0d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PIP Actual",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1010,
+        "y": 380,
+        "wires": []
+    }
+]
