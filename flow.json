@@ -70,9 +70,7 @@
             "ce084a61d788b557",
             "7bdac0345f2d726d",
             "cee40702d7c80195",
-            "76a48c26b1688552",
-            "e5c2c72c8d98e1db",
-            "0904e70e92a9dbcc"
+            "76a48c26b1688552"
         ],
         "x": 34,
         "y": 299,
@@ -94,7 +92,7 @@
         ],
         "x": 28,
         "y": 473,
-        "w": 1244,
+        "w": 1264,
         "h": 234
     },
     {
@@ -126,15 +124,15 @@
             "color": "#000000"
         },
         "nodes": [
-            "6b4aadc25a0128ce",
             "ccad51975c96c09f",
             "e0a986db8a783db1",
             "0d5261c134f74a45",
-            "8df15cca59401082"
+            "8df15cca59401082",
+            "7933d019e4ea356d"
         ],
         "x": 54,
         "y": 499,
-        "w": 652,
+        "w": 642,
         "h": 142
     },
     {
@@ -149,16 +147,15 @@
             "color": "#000000"
         },
         "nodes": [
-            "6ef40822acc1f687",
-            "c07e0ab3c77a38dd",
             "82f9927c64ddf655",
             "8bd789448cb5ebb2",
-            "26b63247279de23d"
+            "26b63247279de23d",
+            "4e31e4d15881b136"
         ],
-        "x": 714,
-        "y": 499,
+        "x": 734,
+        "y": 539,
         "w": 532,
-        "h": 182
+        "h": 142
     },
     {
         "id": "5aaaf04bcb7e61c3",
@@ -267,48 +264,6 @@
         }
     },
     {
-        "id": "a6eb8721741008d0",
-        "type": "tls-config",
-        "name": "",
-        "cert": "",
-        "key": "",
-        "ca": "",
-        "certname": "b0b5f6d17e4ee7ed2f3d765054e8785e02f5583d8b130eef6e704d8fd403d4ae-certificate.pem.crt",
-        "keyname": "b0b5f6d17e4ee7ed2f3d765054e8785e02f5583d8b130eef6e704d8fd403d4ae-private.pem.key",
-        "caname": "AmazonRootCA1.pem",
-        "servername": "",
-        "verifyservercert": true,
-        "alpnprotocol": ""
-    },
-    {
-        "id": "2cfeb892b2531fe4",
-        "type": "mqtt-broker",
-        "name": "MQTT",
-        "broker": "a2jc4862ggr0zs-ats.iot.us-east-2.amazonaws.com",
-        "port": "8883",
-        "tls": "a6eb8721741008d0",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": true,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "d656154329cc3bca",
         "type": "ui_group",
         "name": "Pantalla",
@@ -329,6 +284,51 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "eb8f10b9cdca97c8",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "a2jc4862ggr0zs-ats.iot.us-east-2.amazonaws.com",
+        "port": "8883",
+        "tls": "352b6284259e8eec",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "352b6284259e8eec",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "b0b5f6d17e4ee7ed2f3d765054e8785e02f5583d8b130eef6e704d8fd403d4ae-certificate.pem.crt",
+        "keyname": "b0b5f6d17e4ee7ed2f3d765054e8785e02f5583d8b130eef6e704d8fd403d4ae-private.pem.key",
+        "caname": "AmazonRootCA1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
     },
     {
         "id": "2cc3886a218bfd36",
@@ -776,25 +776,6 @@
         ]
     },
     {
-        "id": "6b4aadc25a0128ce",
-        "type": "mqtt out",
-        "z": "d3bafc4d888d1327",
-        "g": "c1a6fea6327391ca",
-        "name": "",
-        "topic": "device/MQTTBroker/entrada",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "2cfeb892b2531fe4",
-        "x": 560,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "ccad51975c96c09f",
         "type": "inject",
         "z": "d3bafc4d888d1327",
@@ -831,7 +812,7 @@
         "wires": [
             [
                 "0d5261c134f74a45",
-                "6b4aadc25a0128ce"
+                "7933d019e4ea356d"
             ]
         ]
     },
@@ -865,46 +846,6 @@
         "wires": []
     },
     {
-        "id": "6ef40822acc1f687",
-        "type": "mqtt in",
-        "z": "d3bafc4d888d1327",
-        "g": "5c23878488aed3ae",
-        "name": "",
-        "topic": "device/MQTTBroker/entradaNUBE",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "2cfeb892b2531fe4",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 880,
-        "y": 560,
-        "wires": [
-            [
-                "c07e0ab3c77a38dd",
-                "82f9927c64ddf655"
-            ]
-        ]
-    },
-    {
-        "id": "c07e0ab3c77a38dd",
-        "type": "debug",
-        "z": "d3bafc4d888d1327",
-        "g": "5c23878488aed3ae",
-        "name": "debug 5",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 540,
-        "wires": []
-    },
-    {
         "id": "82f9927c64ddf655",
         "type": "function",
         "z": "d3bafc4d888d1327",
@@ -916,7 +857,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
+        "x": 1160,
         "y": 580,
         "wires": [
             []
@@ -934,7 +875,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 810,
+        "x": 830,
         "y": 640,
         "wires": [
             [
@@ -954,7 +895,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
+        "x": 980,
         "y": 640,
         "wires": [
             []
@@ -1121,25 +1062,44 @@
         "wires": []
     },
     {
-        "id": "e5c2c72c8d98e1db",
-        "type": "comment",
+        "id": "7933d019e4ea356d",
+        "type": "mqtt out",
         "z": "d3bafc4d888d1327",
-        "g": "4e95e1e89e159a2c",
+        "g": "c1a6fea6327391ca",
         "name": "",
-        "info": "Escritura a la planta del sistema de forma local y remota",
-        "x": 170,
-        "y": 360,
+        "topic": "device/MQTTBroker/entrada",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "eb8f10b9cdca97c8",
+        "x": 550,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "0904e70e92a9dbcc",
-        "type": "comment",
+        "id": "4e31e4d15881b136",
+        "type": "mqtt in",
         "z": "d3bafc4d888d1327",
-        "g": "4e95e1e89e159a2c",
+        "g": "5c23878488aed3ae",
         "name": "",
-        "info": "Escritura a la planta del sistema de forma local y remota",
-        "x": 380,
-        "y": 360,
-        "wires": []
+        "topic": "device/MQTTBroker/entradaNUBE",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "eb8f10b9cdca97c8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 900,
+        "y": 580,
+        "wires": [
+            [
+                "82f9927c64ddf655"
+            ]
+        ]
     }
 ]
