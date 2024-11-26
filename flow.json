@@ -1117,7 +1117,7 @@
         "z": "d3bafc4d888d1327",
         "g": "5c23878488aed3ae",
         "name": "Status Server",
-        "func": "//adquision del valor de contador\nvar ctr = global.get('ctr','memoryOnly') || 0;\nvar ctr1 = context.get('ctr1')||0;\nvar ctr2 = context.get('ctr2')||0;\nvar ctr3 = context.get('ctr3')||0;\nvar statusServer = false;\n\n// identificacion de status del servidor\nif (ctr != ctr1 && ctr != ctr2 && ctr != ctr3){\n    statusServer = true;\n}\n\n//condiciones del colore\nvar color = 'red';\nif(statusServer){\n    color = 'green';\n}\n\n\nnode.status({ fill: color, shape: \"ring\", text: ' status Server ' + statusServer + \" ctr \" + ctr });\n// guardando los estados anteriores\ncontext.set('ctr3',ctr2);\ncontext.set('ctr2',ctr1);\ncontext.set('ctr1',ctr);\n//guardando el estado de status server\nglobal.set('statusServer',statusServer,'memoryOnly');\n\nreturn msg;",
+        "func": "//adquision del valor de contador\nvar ctr = global.get('ctr','memoryOnly') || 0;\nvar ctr1 = context.get('ctr1')||0;\nvar ctr2 = context.get('ctr2')||0;\nvar ctr3 = context.get('ctr3')||0;\nvar statusServer = false;\n\n// identificacion de status del servidor\nif (ctr != ctr1 && ctr != ctr2 && ctr != ctr3){\n    statusServer = true;\n}\n\n//condiciones del colores\nvar color = 'red';\nif(statusServer){\n    color = 'green';\n}\n\n\nnode.status({ fill: color, shape: \"ring\", text: ' status Server ' + statusServer + \" ctr \" + ctr });\n// guardando los estados anteriores\ncontext.set('ctr3',ctr2);\ncontext.set('ctr2',ctr1);\ncontext.set('ctr1',ctr);\n//guardando el estado de status server\nglobal.set('statusServer',statusServer,'memoryOnly');\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
