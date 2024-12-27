@@ -48,12 +48,14 @@
             "b577870f2cd9ac34",
             "b1fa050b3d65483f",
             "13c685b07e0ef3f5",
-            "b83f462fe9fc336a"
+            "b83f462fe9fc336a",
+            "76a48c26b1688552",
+            "9dc8ada4cd2c917f"
         ],
-        "x": 914,
+        "x": 1014,
         "y": 59,
         "w": 592,
-        "h": 182
+        "h": 242
     },
     {
         "id": "4e95e1e89e159a2c",
@@ -68,19 +70,19 @@
         "nodes": [
             "3dfcc44a8bb60a4c",
             "a66b3bd8b9f29456",
-            "ce084a61d788b557",
-            "7bdac0345f2d726d",
             "cee40702d7c80195",
-            "76a48c26b1688552",
             "fc3ac0c85d0e07b3",
             "9f1aa5bb8e831a64",
             "073185c99c14cdd4",
-            "e7c92b0da4b74ea3"
+            "e7c92b0da4b74ea3",
+            "896e85c0cd803242",
+            "b000dc2b72a6640e",
+            "02f3883ea15215b8"
         ],
-        "x": 34,
+        "x": 114,
         "y": 299,
-        "w": 972,
-        "h": 182
+        "w": 1032,
+        "h": 202
     },
     {
         "id": "46ca1a28cf2e749b",
@@ -161,6 +163,23 @@
         "y": 539,
         "w": 532,
         "h": 142
+    },
+    {
+        "id": "94abe19cb19333f1",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "name": "Predefinir el tiempo de muestreo",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c398b05cbaa4da5b",
+            "ad0b991e833b708c"
+        ],
+        "x": 184,
+        "y": 1079,
+        "w": 442,
+        "h": 82
     },
     {
         "id": "5aaaf04bcb7e61c3",
@@ -374,8 +393,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1390,
-        "y": 160,
+        "x": 1490,
+        "y": 220,
         "wires": [
             []
         ]
@@ -392,8 +411,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1220,
-        "y": 200,
+        "x": 1320,
+        "y": 260,
         "wires": [
             [
                 "2cc3886a218bfd36"
@@ -412,8 +431,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1070,
-        "y": 160,
+        "x": 1170,
+        "y": 220,
         "wires": [
             [
                 "bacdb831509bd076"
@@ -432,8 +451,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1240,
-        "y": 100,
+        "x": 1340,
+        "y": 160,
         "wires": [
             [
                 "2cc3886a218bfd36",
@@ -457,11 +476,12 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 1070,
-        "y": 100,
+        "x": 1170,
+        "y": 160,
         "wires": [
             [
-                "86657a338622ef8d"
+                "86657a338622ef8d",
+                "9dc8ada4cd2c917f"
             ]
         ]
     },
@@ -486,8 +506,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 1030,
-        "y": 200,
+        "x": 1130,
+        "y": 260,
         "wires": [
             [
                 "bacdb831509bd076"
@@ -739,8 +759,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1390,
-        "y": 100,
+        "x": 1490,
+        "y": 160,
         "wires": []
     },
     {
@@ -756,8 +776,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1400,
-        "y": 200,
+        "x": 1500,
+        "y": 260,
         "wires": []
     },
     {
@@ -772,7 +792,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 130,
+        "x": 210,
         "y": 420,
         "wires": [
             [
@@ -887,54 +907,14 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 290,
+        "x": 370,
         "y": 420,
         "wires": [
             [
-                "7bdac0345f2d726d"
+                "896e85c0cd803242"
             ],
             [
                 "fc3ac0c85d0e07b3"
-            ]
-        ]
-    },
-    {
-        "id": "ce084a61d788b557",
-        "type": "function",
-        "z": "d3bafc4d888d1327",
-        "g": "4e95e1e89e159a2c",
-        "name": "Planta Real",
-        "func": "// definicion de variables internas de la discretizacion\nvar uk = msg.payload;//Conversion de frecuencia de entrada\nvar yk1 = flow.get('Planta.yk1','memoryOnly')||0;\nvar yk2 = flow.get('Planta.yk2','memoryOnly')||0;\n\nvar uk1 = flow.get('Planta.uk1','memoryOnly')||0;\nvar uk2 = flow.get('Planta.uk2','memoryOnly')||0;\n\n// var yk = 0.0417*uk + 0.0833*uk1 + 0.0417*uk2 + 0.3333*yk1 + 0*yk2 ; // con tiempo de 1s\nvar yk = 60e3*uk + 120e3*uk1 + 60e3*uk2 + 0.33333*yk1 -0*yk2 ; // con tiempo de 1s\nyk = acotarADecimales(yk,4);\nmsg.payload = yk;//enviar a HMI\n//guardar los estados anterirores\nvar Planta = { yk2:yk1,yk1:yk,uk2:uk1,uk1:uk};\nflow.set('Planta',Planta,'memoryOnly');\n\nnode.status({fill:\"blue\",shape:\"dot\",text:\"PIP \" + yk});\nglobal.set('presion',yk);\n\nfunction acotarADecimales(num, decimales = 4) {\n    return parseFloat(num.toFixed(decimales));\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 710,
-        "y": 380,
-        "wires": [
-            [
-                "76a48c26b1688552"
-            ]
-        ]
-    },
-    {
-        "id": "7bdac0345f2d726d",
-        "type": "function",
-        "z": "d3bafc4d888d1327",
-        "g": "4e95e1e89e159a2c",
-        "name": "PID",
-        "func": "// traer los parametros globales\nvar reference = global.get('setPoint_Presion') || 0;  // Valor deseado (referencia)\nvar output = global.get('presion') || 0;  //// Salida inicial del sistema\n\n//Traer los parametros anteriores\nvar uk = Math.abs(reference- output);//entrada del sistema \nvar uk1 = flow.get('uk1')||0;\nvar yk = 0;\nvar yk1 = flow.get('yk1')||0;\n\n// % Parámetros del controlador PID\nvar Kp = 5.27e-6;\nvar Ki = 5.15e-6;\nvar Kd = 1.14e-6;\nvar Tf = 0.00619;\nvar T = 1; //% Tiempo de muestreo(s)\n\n\n// % Término Proporcional\nvar b0_p = Kp;\n\n// % Término Integral\nvar b0_i = Ki * T / 2;\nvar b1_i = Ki * T / 2;\n\n// % Término Derivativo\nvar b0_d = 2 * Kd / T;\nvar b1_d = -2 * Kd / T;\nvar a1_d = (1 - Tf * 2 / T) / (1 + Tf * 2 / T);\n\n// % Proporcional\nvar y_p = b0_p * uk;\n    \n// % Integral\nvar y_i = b0_i * uk + b1_i * uk1 + yk1;\n\n//     % Proporcional\ny_p = b0_p * uk;\n\n// % Integral\ny_i = b0_i * uk + b1_i * uk1 + yk;\n\n\n// % Derivativo\nvar y_d = b0_d * uk + b1_d * uk1 - a1_d * yk;\n\n// % Salida total\nyk = y_p + y_i + y_d;\nmsg.payload = yk;\n//visualizacion de nodo\nnode.status({fill:\"blue\",shape:\"dot\",text:\"PID\" + yk});\nflow.set('yk1',yk);\nflow.set('uk1',uk);\ncontext.set('monitoreo', { ctsProporcional: { b0_p }, ctsIntegrales: { b0_i, b1_i }, ctsDerivativas: { b0_d, b1_d, a1_d}},'memoryOnly');\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 380,
-        "wires": [
-            [
-                "ce084a61d788b557"
             ]
         ]
     },
@@ -945,7 +925,7 @@
         "g": "4e95e1e89e159a2c",
         "name": "PID Matlab",
         "info": "% Parámetros del controlador PID\nKp = 5.27e-6;\nKi = 5.15e-6;\nKd = 1.14e-6;\nTf = 0.00619;\nT = 1; % Tiempo de muestreo (s)\n\n% Término Proporcional\nb0_p = Kp;\n\n% Término Integral\nb0_i = Ki * T / 2;\nb1_i = Ki * T / 2;\n\n% Término Derivativo\nb0_d = 2 * Kd / T;\nb1_d = -2 * Kd / T;\na1_d = (1 - Tf * 2 / T) / (1 + Tf * 2 / T);\n\n% Simulación del sistema con entrada escalón\nN = 100; % Número de muestras\nu = ones(1, N); % Entrada escalón\ny = zeros(1, N); % Salida inicializada\n\nfor k = 2:N\n    % Proporcional\n    y_p = b0_p * u(k);\n    \n    % Integral\n    if k > 1\n        y_i = b0_i * u(k) + b1_i * u(k-1) + y(k-1);\n    else\n        y_i = 0;\n    end\n    \n    % Derivativo\n    if k > 1\n        y_d = b0_d * u(k) + b1_d * u(k-1) - a1_d * y(k-1);\n    else\n        y_d = 0;\n    end\n    \n    % Salida total\n    y(k) = y_p + y_i + y_d;\nend\n\n% Graficar la respuesta\nfigure;\nplot(1:N, y, 'b', 'LineWidth', 1.5);\ntitle('Respuesta del Controlador PID Discreto');\nxlabel('Muestras (k)');\nylabel('Salida y[k]');\ngrid on",
-        "x": 500,
+        "x": 580,
         "y": 340,
         "wires": []
     },
@@ -1009,28 +989,6 @@
         ]
     },
     {
-        "id": "76a48c26b1688552",
-        "type": "ui_text",
-        "z": "d3bafc4d888d1327",
-        "g": "4e95e1e89e159a2c",
-        "group": "48d7616710ecee0d",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "PIP Actual",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 910,
-        "y": 380,
-        "wires": []
-    },
-    {
         "id": "7933d019e4ea356d",
         "type": "mqtt out",
         "z": "d3bafc4d888d1327",
@@ -1076,18 +1034,18 @@
         "type": "function",
         "z": "d3bafc4d888d1327",
         "g": "4e95e1e89e159a2c",
-        "name": "PID NUBE",
+        "name": "PI NUBE",
         "func": "var SalidaPID = global.get('SalidaPID','memoryOnly')||0;\nmsg.payload = SalidaPID;\nnode.status({fill:\"red\",shape:\"ring\",text:\"PID \" + SalidaPID});\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
-        "y": 440,
+        "x": 680,
+        "y": 460,
         "wires": [
             [
-                "ce084a61d788b557"
+                "02f3883ea15215b8"
             ]
         ]
     },
@@ -1136,7 +1094,7 @@
         "g": "4e95e1e89e159a2c",
         "name": "Modelo Planta",
         "info": "Modelo Matematico de la planta discreto en ecuaciones\nde diferencia a 1s",
-        "x": 710,
+        "x": 790,
         "y": 340,
         "wires": []
     },
@@ -1147,7 +1105,7 @@
         "g": "4e95e1e89e159a2c",
         "name": "Tag HMI",
         "info": "",
-        "x": 900,
+        "x": 980,
         "y": 340,
         "wires": []
     },
@@ -1158,8 +1116,154 @@
         "g": "4e95e1e89e159a2c",
         "name": "Tiempo de Muestreo",
         "info": "",
-        "x": 170,
+        "x": 250,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "896e85c0cd803242",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "Error",
+        "func": "// ecuacion del error\n\n// variables de ingreso\n// r(k) = set point\n// y(k - 1) = frecuencia en el instante anterior\n//  % Error\n// e(k) = r(k) - y(k - 1);\nvar setPoint = global.get('setPoint_Presion')|| -1;\nvar presionAnterior = global.get('presionAnterior')|| -1;\n\n// calcule siempre y cuando sea diferente de -1\nvar salida_error = setPoint - presionAnterior;\nmsg.payload = salida_error;\nnode.status({fill:\"blue\",shape:\"ring\",text:\"error \" + salida_error});\n\ncontext.set('monitoreo', { salida_error,setPoint},'memoryOnly');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 380,
+        "wires": [
+            [
+                "b000dc2b72a6640e"
+            ]
+        ]
+    },
+    {
+        "id": "b000dc2b72a6640e",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "Controlador PI Local",
+        "func": "// % Controlador PI\n// u(k) = b0_c * e(k) + b1_c * e(k - 1) + u(k - 1);\n\n// variables del PI\n// % Parámetros del controlador PI\nvar Kp = 1.81e-6;\nvar Ki = 1.24e-6;\nvar T = global.get('TiempoMuestreo')||1; //% Tiempo de muestreo\nvar b0_c = Kp + Ki * T;\nvar b1_c = -Kp;\n// variables del calculo del error\nvar error = msg.payload;\nvar error_k1 = context.get('error_k1','memoryOnly')||0;\nvar u1 = context.get('u1','memoryOnly')||0;\nvar u = b0_c * error + b1_c * error_k1 + u1;\nmsg.payload = u;\nnode.status({ fill: \"blue\", shape: \"ring\", text: \"u\" + u });\n\n// consulta de variables de monitoreo\ncontext.set('monitoreo', {'errores':{error,error_k1},'salidasControl':{u,u1}}, 'memoryOnly');\n// guardar el error anterior\ncontext.set('error_k1', error , 'memoryOnly');\n// guardar la salida anterior del PI\ncontext.set('u1', u , 'memoryOnly');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 380,
+        "wires": [
+            [
+                "02f3883ea15215b8"
+            ]
+        ]
+    },
+    {
+        "id": "02f3883ea15215b8",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "planta",
+        "func": "// Planta\n// % Sistema discreto\n// y(k) = b0 * u(k) + b1 * u(k - 1) + b2 * u(k - 2) - a1_d * y(k - 1) - a2_d * y(k - 2);\n\n// variables de la planta\nvar b0 = 60e3, b1 = 120e3, b2 = 60e3; //% Numerador\nvar a1_d = -0.333333333333333,a2_d = 0;// % Denominador\n\n// accion de control \nvar u = msg.payload;\nvar u1 = context.get('u1', 'memoryOnly') || 0;\nvar u2 = context.get('u2', 'memoryOnly') || 0;\n// estados anteriores de la planta\nvar y1 = context.get('y1', 'memoryOnly') || 0;\nvar y2 = context.get('y2', 'memoryOnly') || 0;\n\n\n//ecuacion de la planta\nvar y = b0 * u + b1 * u1 + b2 * u2 - a1_d * y1 - a2_d * y2;\nnode.status({ fill: \"blue\", shape: \"ring\", text: \"presion \" + y });\n// guardar los estados anteriores del control\n\ncontext.set('u2', u1, 'memoryOnly');\ncontext.set('u1', u, 'memoryOnly');\n// guardar los estados anteriores de la planta \ncontext.set('y2', y1, 'memoryOnly');\ncontext.set('y1', y, 'memoryOnly');\n\n// variables de monitoreo\ncontext.set('monitoreo', {u} , 'memoryOnly');\n\n// guardar variables globales\nglobal.set('presionAnterior', y1);\nglobal.set('presion', y);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad0b991e833b708c",
+        "type": "inject",
+        "z": "d3bafc4d888d1327",
+        "g": "94abe19cb19333f1",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 280,
+        "y": 1120,
+        "wires": [
+            [
+                "c398b05cbaa4da5b"
+            ]
+        ]
+    },
+    {
+        "id": "c398b05cbaa4da5b",
+        "type": "change",
+        "z": "d3bafc4d888d1327",
+        "g": "94abe19cb19333f1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "TiempoMuestreo",
+                "pt": "global",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "76a48c26b1688552",
+        "type": "ui_text",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "group": "48d7616710ecee0d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PIP Actual",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1490,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9dc8ada4cd2c917f",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "Presion",
+        "func": "var presion = global.get('presion')||0;\nmsg.payload = presion;\nnode.status({fill:\"blue\",shape:\"dot\",text:\"presion \" + presion});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 100,
+        "wires": [
+            [
+                "76a48c26b1688552"
+            ]
+        ]
     }
 ]
