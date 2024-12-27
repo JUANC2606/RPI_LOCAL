@@ -73,15 +73,14 @@
             "cee40702d7c80195",
             "fc3ac0c85d0e07b3",
             "9f1aa5bb8e831a64",
-            "073185c99c14cdd4",
             "e7c92b0da4b74ea3",
             "896e85c0cd803242",
             "b000dc2b72a6640e",
             "02f3883ea15215b8"
         ],
-        "x": 114,
-        "y": 299,
-        "w": 1032,
+        "x": 34,
+        "y": 319,
+        "w": 1072,
         "h": 202
     },
     {
@@ -98,7 +97,7 @@
             "5c23878488aed3ae"
         ],
         "x": 28,
-        "y": 513,
+        "y": 533,
         "w": 1244,
         "h": 194
     },
@@ -120,6 +119,23 @@
         "h": 82
     },
     {
+        "id": "94abe19cb19333f1",
+        "type": "group",
+        "z": "d3bafc4d888d1327",
+        "name": "Predefinir el tiempo de muestreo",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c398b05cbaa4da5b",
+            "ad0b991e833b708c"
+        ],
+        "x": 184,
+        "y": 1079,
+        "w": 442,
+        "h": 82
+    },
+    {
         "id": "c1a6fea6327391ca",
         "type": "group",
         "z": "d3bafc4d888d1327",
@@ -138,7 +154,7 @@
             "7933d019e4ea356d"
         ],
         "x": 54,
-        "y": 539,
+        "y": 559,
         "w": 642,
         "h": 142
     },
@@ -160,26 +176,9 @@
             "26b63247279de23d"
         ],
         "x": 714,
-        "y": 539,
+        "y": 559,
         "w": 532,
         "h": 142
-    },
-    {
-        "id": "94abe19cb19333f1",
-        "type": "group",
-        "z": "d3bafc4d888d1327",
-        "name": "Predefinir el tiempo de muestreo",
-        "style": {
-            "label": true
-        },
-        "nodes": [
-            "c398b05cbaa4da5b",
-            "ad0b991e833b708c"
-        ],
-        "x": 184,
-        "y": 1079,
-        "w": 442,
-        "h": 82
     },
     {
         "id": "5aaaf04bcb7e61c3",
@@ -792,8 +791,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 210,
-        "y": 420,
+        "x": 130,
+        "y": 440,
         "wires": [
             [
                 "a66b3bd8b9f29456"
@@ -813,7 +812,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 620,
+        "y": 640,
         "wires": [
             [
                 "e0a986db8a783db1"
@@ -833,7 +832,7 @@
         "finalize": "",
         "libs": [],
         "x": 330,
-        "y": 620,
+        "y": 640,
         "wires": [
             [
                 "0d5261c134f74a45",
@@ -856,7 +855,7 @@
         "statusVal": "payload",
         "statusType": "auto",
         "x": 500,
-        "y": 640,
+        "y": 660,
         "wires": []
     },
     {
@@ -867,7 +866,7 @@
         "name": "",
         "info": "tutoriales de donde se saco\nhttps://www.youtube.com/watch?v=oedCiDnIV14&list=PL5_Rrj9tYQAml3cNxw4rlAJL-QyEoNG8b&index=6",
         "x": 160,
-        "y": 580,
+        "y": 600,
         "wires": []
     },
     {
@@ -883,7 +882,7 @@
         "finalize": "",
         "libs": [],
         "x": 1140,
-        "y": 580,
+        "y": 600,
         "wires": [
             []
         ]
@@ -907,8 +906,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 370,
-        "y": 420,
+        "x": 290,
+        "y": 440,
         "wires": [
             [
                 "896e85c0cd803242"
@@ -925,8 +924,8 @@
         "g": "4e95e1e89e159a2c",
         "name": "PID Matlab",
         "info": "% Parámetros del controlador PID\nKp = 5.27e-6;\nKi = 5.15e-6;\nKd = 1.14e-6;\nTf = 0.00619;\nT = 1; % Tiempo de muestreo (s)\n\n% Término Proporcional\nb0_p = Kp;\n\n% Término Integral\nb0_i = Ki * T / 2;\nb1_i = Ki * T / 2;\n\n% Término Derivativo\nb0_d = 2 * Kd / T;\nb1_d = -2 * Kd / T;\na1_d = (1 - Tf * 2 / T) / (1 + Tf * 2 / T);\n\n% Simulación del sistema con entrada escalón\nN = 100; % Número de muestras\nu = ones(1, N); % Entrada escalón\ny = zeros(1, N); % Salida inicializada\n\nfor k = 2:N\n    % Proporcional\n    y_p = b0_p * u(k);\n    \n    % Integral\n    if k > 1\n        y_i = b0_i * u(k) + b1_i * u(k-1) + y(k-1);\n    else\n        y_i = 0;\n    end\n    \n    % Derivativo\n    if k > 1\n        y_d = b0_d * u(k) + b1_d * u(k-1) - a1_d * y(k-1);\n    else\n        y_d = 0;\n    end\n    \n    % Salida total\n    y(k) = y_p + y_i + y_d;\nend\n\n% Graficar la respuesta\nfigure;\nplot(1:N, y, 'b', 'LineWidth', 1.5);\ntitle('Respuesta del Controlador PID Discreto');\nxlabel('Muestras (k)');\nylabel('Salida y[k]');\ngrid on",
-        "x": 580,
-        "y": 340,
+        "x": 720,
+        "y": 360,
         "wires": []
     },
     {
@@ -1004,7 +1003,7 @@
         "expiry": "",
         "broker": "eb8f10b9cdca97c8",
         "x": 550,
-        "y": 580,
+        "y": 600,
         "wires": []
     },
     {
@@ -1022,7 +1021,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 880,
-        "y": 580,
+        "y": 600,
         "wires": [
             [
                 "82f9927c64ddf655"
@@ -1041,8 +1040,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 460,
+        "x": 600,
+        "y": 480,
         "wires": [
             [
                 "02f3883ea15215b8"
@@ -1062,7 +1061,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 810,
-        "y": 640,
+        "y": 660,
         "wires": [
             [
                 "26b63247279de23d"
@@ -1082,7 +1081,7 @@
         "finalize": "",
         "libs": [],
         "x": 960,
-        "y": 640,
+        "y": 660,
         "wires": [
             []
         ]
@@ -1094,19 +1093,8 @@
         "g": "4e95e1e89e159a2c",
         "name": "Modelo Planta",
         "info": "Modelo Matematico de la planta discreto en ecuaciones\nde diferencia a 1s",
-        "x": 790,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "073185c99c14cdd4",
-        "type": "comment",
-        "z": "d3bafc4d888d1327",
-        "g": "4e95e1e89e159a2c",
-        "name": "Tag HMI",
-        "info": "",
-        "x": 980,
-        "y": 340,
+        "x": 1010,
+        "y": 360,
         "wires": []
     },
     {
@@ -1116,8 +1104,8 @@
         "g": "4e95e1e89e159a2c",
         "name": "Tiempo de Muestreo",
         "info": "",
-        "x": 250,
-        "y": 380,
+        "x": 170,
+        "y": 400,
         "wires": []
     },
     {
@@ -1132,8 +1120,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 380,
+        "x": 530,
+        "y": 400,
         "wires": [
             [
                 "b000dc2b72a6640e"
@@ -1152,8 +1140,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
-        "y": 380,
+        "x": 760,
+        "y": 400,
         "wires": [
             [
                 "02f3883ea15215b8"
@@ -1172,8 +1160,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
-        "y": 380,
+        "x": 990,
+        "y": 400,
         "wires": [
             []
         ]
