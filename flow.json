@@ -76,12 +76,13 @@
             "e7c92b0da4b74ea3",
             "896e85c0cd803242",
             "b000dc2b72a6640e",
-            "02f3883ea15215b8"
+            "02f3883ea15215b8",
+            "5f04eabd0d75b5fb"
         ],
         "x": 34,
         "y": 319,
-        "w": 1072,
-        "h": 202
+        "w": 1132,
+        "h": 182
     },
     {
         "id": "46ca1a28cf2e749b",
@@ -96,9 +97,9 @@
             "c1a6fea6327391ca",
             "5c23878488aed3ae"
         ],
-        "x": 28,
+        "x": 38,
         "y": 533,
-        "w": 1244,
+        "w": 1224,
         "h": 194
     },
     {
@@ -130,8 +131,8 @@
             "c398b05cbaa4da5b",
             "ad0b991e833b708c"
         ],
-        "x": 184,
-        "y": 1079,
+        "x": 44,
+        "y": 839,
         "w": 442,
         "h": 82
     },
@@ -147,15 +148,14 @@
             "color": "#000000"
         },
         "nodes": [
-            "ccad51975c96c09f",
             "e0a986db8a783db1",
             "0d5261c134f74a45",
             "8df15cca59401082",
             "7933d019e4ea356d"
         ],
-        "x": 54,
+        "x": 64,
         "y": 559,
-        "w": 642,
+        "w": 622,
         "h": 142
     },
     {
@@ -175,7 +175,7 @@
             "8bd789448cb5ebb2",
             "26b63247279de23d"
         ],
-        "x": 714,
+        "x": 704,
         "y": 559,
         "w": 532,
         "h": 142
@@ -795,26 +795,7 @@
         "y": 440,
         "wires": [
             [
-                "a66b3bd8b9f29456"
-            ]
-        ]
-    },
-    {
-        "id": "ccad51975c96c09f",
-        "type": "inject",
-        "z": "d3bafc4d888d1327",
-        "g": "c1a6fea6327391ca",
-        "name": "",
-        "props": [],
-        "repeat": "1",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 150,
-        "y": 640,
-        "wires": [
-            [
+                "a66b3bd8b9f29456",
                 "e0a986db8a783db1"
             ]
         ]
@@ -831,7 +812,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 330,
+        "x": 320,
         "y": 640,
         "wires": [
             [
@@ -854,7 +835,7 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 500,
+        "x": 490,
         "y": 660,
         "wires": []
     },
@@ -865,7 +846,7 @@
         "g": "c1a6fea6327391ca",
         "name": "",
         "info": "tutoriales de donde se saco\nhttps://www.youtube.com/watch?v=oedCiDnIV14&list=PL5_Rrj9tYQAml3cNxw4rlAJL-QyEoNG8b&index=6",
-        "x": 160,
+        "x": 150,
         "y": 600,
         "wires": []
     },
@@ -881,7 +862,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1140,
+        "x": 1130,
         "y": 600,
         "wires": [
             []
@@ -1002,7 +983,7 @@
         "correl": "",
         "expiry": "",
         "broker": "eb8f10b9cdca97c8",
-        "x": 550,
+        "x": 540,
         "y": 600,
         "wires": []
     },
@@ -1020,7 +1001,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 880,
+        "x": 870,
         "y": 600,
         "wires": [
             [
@@ -1040,11 +1021,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 600,
-        "y": 480,
+        "x": 760,
+        "y": 460,
         "wires": [
             [
-                "02f3883ea15215b8"
+                "02f3883ea15215b8",
+                "5f04eabd0d75b5fb"
             ]
         ]
     },
@@ -1060,7 +1042,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 810,
+        "x": 800,
         "y": 660,
         "wires": [
             [
@@ -1080,7 +1062,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
+        "x": 950,
         "y": 660,
         "wires": [
             []
@@ -1102,9 +1084,9 @@
         "type": "comment",
         "z": "d3bafc4d888d1327",
         "g": "4e95e1e89e159a2c",
-        "name": "Tiempo de Muestreo",
+        "name": "Tiempo de Ejecucion del programa",
         "info": "",
-        "x": 170,
+        "x": 220,
         "y": 400,
         "wires": []
     },
@@ -1134,36 +1116,19 @@
         "z": "d3bafc4d888d1327",
         "g": "4e95e1e89e159a2c",
         "name": "Controlador PI Local",
-        "func": "// % Controlador PI\n// u(k) = b0_c * e(k) + b1_c * e(k - 1) + u(k - 1);\n\n// variables del PI\n// % Parámetros del controlador PI\nvar Kp = 1.81e-6;\nvar Ki = 1.24e-6;\nvar T = global.get('TiempoMuestreo')||1; //% Tiempo de muestreo\nvar b0_c = Kp + Ki * T;\nvar b1_c = -Kp;\n// variables del calculo del error\nvar error = msg.payload;\nvar error_k1 = context.get('error_k1','memoryOnly')||0;\nvar u1 = context.get('u1','memoryOnly')||0;\nvar u = b0_c * error + b1_c * error_k1 + u1;\nmsg.payload = u;\nnode.status({ fill: \"blue\", shape: \"ring\", text: \"u\" + u });\n\n// consulta de variables de monitoreo\ncontext.set('monitoreo', {'errores':{error,error_k1},'salidasControl':{u,u1}}, 'memoryOnly');\n// guardar el error anterior\ncontext.set('error_k1', error , 'memoryOnly');\n// guardar la salida anterior del PI\ncontext.set('u1', u , 'memoryOnly');\nreturn msg;",
+        "func": "// % Controlador PI\n// u(k) = b0_c * e(k) + b1_c * e(k - 1) + u(k - 1);\n\n// variables del PI\n// % Parámetros del controlador PI\nvar Kp = 2.54e-6;\nvar Ki = 1.68e-6;\nvar T = global.get('TiempoMuestreo')||1; //% Tiempo de muestreo\nvar b0PI = Kp + Ki * T;\nvar b1PI = -Kp;\n// variables del calculo del error\nvar error = msg.payload;\nvar error_k1 = context.get('error_k1','memoryOnly')||0;\nvar u1 = context.get('u1','memoryOnly')||0;\n\n\n// ecuacion de control  PI\nvar u = b0PI * error + b1PI * error_k1 + u1;\n\nmsg.payload = u;\nnode.status({ fill: \"blue\", shape: \"ring\", text: \"u\" + u });\n\n// consulta de variables de monitoreo\ncontext.set('monitoreo', { 'errores': { error, error_k1 }, 'ganancia': { b0PI, b1PI},'salidasControl':{u,u1}}, 'memoryOnly');\n// guardar el error anterior\ncontext.set('error_k1', error , 'memoryOnly');\n// guardar la salida anterior del PI\ncontext.set('u1', u , 'memoryOnly');\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
+        "x": 780,
         "y": 400,
         "wires": [
             [
-                "02f3883ea15215b8"
+                "02f3883ea15215b8",
+                "5f04eabd0d75b5fb"
             ]
-        ]
-    },
-    {
-        "id": "02f3883ea15215b8",
-        "type": "function",
-        "z": "d3bafc4d888d1327",
-        "g": "4e95e1e89e159a2c",
-        "name": "planta",
-        "func": "// Planta\n// % Sistema discreto\n// y(k) = b0 * u(k) + b1 * u(k - 1) + b2 * u(k - 2) - a1_d * y(k - 1) - a2_d * y(k - 2);\n\n// variables de la planta\nvar b0 = 60e3, b1 = 120e3, b2 = 60e3; //% Numerador\nvar a1_d = -0.333333333333333,a2_d = 0;// % Denominador\n\n// accion de control \nvar u = msg.payload;\nvar u1 = context.get('u1', 'memoryOnly') || 0;\nvar u2 = context.get('u2', 'memoryOnly') || 0;\n// estados anteriores de la planta\nvar y1 = context.get('y1', 'memoryOnly') || 0;\nvar y2 = context.get('y2', 'memoryOnly') || 0;\n\n\n//ecuacion de la planta\nvar y = b0 * u + b1 * u1 + b2 * u2 - a1_d * y1 - a2_d * y2;\nnode.status({ fill: \"blue\", shape: \"ring\", text: \"presion \" + y });\n// guardar los estados anteriores del control\n\ncontext.set('u2', u1, 'memoryOnly');\ncontext.set('u1', u, 'memoryOnly');\n// guardar los estados anteriores de la planta \ncontext.set('y2', y1, 'memoryOnly');\ncontext.set('y1', y, 'memoryOnly');\n\n// variables de monitoreo\ncontext.set('monitoreo', {u} , 'memoryOnly');\n\n// guardar variables globales\nglobal.set('presionAnterior', y1);\nglobal.set('presion', y);\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 400,
-        "wires": [
-            []
         ]
     },
     {
@@ -1178,8 +1143,8 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 280,
-        "y": 1120,
+        "x": 140,
+        "y": 880,
         "wires": [
             [
                 "c398b05cbaa4da5b"
@@ -1197,7 +1162,7 @@
                 "t": "set",
                 "p": "TiempoMuestreo",
                 "pt": "global",
-                "to": "1",
+                "to": "0.1",
                 "tot": "num"
             }
         ],
@@ -1206,8 +1171,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 480,
-        "y": 1120,
+        "x": 340,
+        "y": 880,
         "wires": [
             []
         ]
@@ -1252,6 +1217,42 @@
             [
                 "76a48c26b1688552"
             ]
+        ]
+    },
+    {
+        "id": "02f3883ea15215b8",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "planta",
+        "func": "// Planta\n// % Sistema discreto\n// y(k) = b0 * u(k) + b1 * u(k - 1) + b2 * u(k - 2) - a1_d * y(k - 1) - a2_d * y(k - 2);\n\n// variables de la planta\nvar b0 = 1.558441558441559e03, b1 = 3.116883116883117e03, b2 = 1.558441558441559e03; //% Numerador\nvar a1 = -1.722943722943723, a2 = 0.740259740259740;// % Denominador\n\n// accion de control \nvar u = msg.payload;\nvar u1 = context.get('u1', 'memoryOnly') || 0;\nvar u2 = context.get('u2', 'memoryOnly') || 0;\n// estados anteriores de la planta\nvar y1 = context.get('y1', 'memoryOnly') || 0;\nvar y2 = context.get('y2', 'memoryOnly') || 0;\n\n\n//ecuacion de la planta\nvar y = b0 * u + b1 * u1 + b2 * u2 - a1 * y1 - a2 * y2;\nnode.status({ fill: \"blue\", shape: \"ring\", text: \"presion \" + y });\n// guardar los estados anteriores del control\n\ncontext.set('u2', u1, 'memoryOnly');\ncontext.set('u1', u, 'memoryOnly');\n// guardar los estados anteriores de la planta \ncontext.set('y2', y1, 'memoryOnly');\ncontext.set('y1', y, 'memoryOnly');\n\n// variables de monitoreo\ncontext.set('monitoreo', {u} , 'memoryOnly');\n\n// guardar variables globales\nglobal.set('presionAnterior', y1);\nglobal.set('presion', y);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f04eabd0d75b5fb",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "4e95e1e89e159a2c",
+        "name": "Coversion a Frecuencia ",
+        "func": "var u = msg.payload;\nvar frecuencia = Math.sqrt(1/u);\nnode.status({fill:\"blue\",shape:\"ring\",text:\"frecuencia \" + frecuencia});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 460,
+        "wires": [
+            []
         ]
     }
 ]
