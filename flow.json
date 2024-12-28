@@ -903,9 +903,9 @@
         "type": "comment",
         "z": "d3bafc4d888d1327",
         "g": "4e95e1e89e159a2c",
-        "name": "PID Matlab",
-        "info": "% Parámetros del controlador PID\nKp = 5.27e-6;\nKi = 5.15e-6;\nKd = 1.14e-6;\nTf = 0.00619;\nT = 1; % Tiempo de muestreo (s)\n\n% Término Proporcional\nb0_p = Kp;\n\n% Término Integral\nb0_i = Ki * T / 2;\nb1_i = Ki * T / 2;\n\n% Término Derivativo\nb0_d = 2 * Kd / T;\nb1_d = -2 * Kd / T;\na1_d = (1 - Tf * 2 / T) / (1 + Tf * 2 / T);\n\n% Simulación del sistema con entrada escalón\nN = 100; % Número de muestras\nu = ones(1, N); % Entrada escalón\ny = zeros(1, N); % Salida inicializada\n\nfor k = 2:N\n    % Proporcional\n    y_p = b0_p * u(k);\n    \n    % Integral\n    if k > 1\n        y_i = b0_i * u(k) + b1_i * u(k-1) + y(k-1);\n    else\n        y_i = 0;\n    end\n    \n    % Derivativo\n    if k > 1\n        y_d = b0_d * u(k) + b1_d * u(k-1) - a1_d * y(k-1);\n    else\n        y_d = 0;\n    end\n    \n    % Salida total\n    y(k) = y_p + y_i + y_d;\nend\n\n% Graficar la respuesta\nfigure;\nplot(1:N, y, 'b', 'LineWidth', 1.5);\ntitle('Respuesta del Controlador PID Discreto');\nxlabel('Muestras (k)');\nylabel('Salida y[k]');\ngrid on",
-        "x": 720,
+        "name": "PI Matlab",
+        "info": "",
+        "x": 740,
         "y": 360,
         "wires": []
     },
