@@ -50,12 +50,14 @@
             "13c685b07e0ef3f5",
             "b83f462fe9fc336a",
             "76a48c26b1688552",
-            "9dc8ada4cd2c917f"
+            "9dc8ada4cd2c917f",
+            "f3b2ec1800c00afd",
+            "6b70f0904f7aab76"
         ],
         "x": 1014,
-        "y": 59,
-        "w": 592,
-        "h": 242
+        "y": 19,
+        "w": 632,
+        "h": 282
     },
     {
         "id": "4e95e1e89e159a2c",
@@ -480,7 +482,8 @@
         "wires": [
             [
                 "86657a338622ef8d",
-                "9dc8ada4cd2c917f"
+                "9dc8ada4cd2c917f",
+                "6b70f0904f7aab76"
             ]
         ]
     },
@@ -1253,6 +1256,58 @@
         "y": 460,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "f3b2ec1800c00afd",
+        "type": "ui_led",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "order": 4,
+        "group": "48d7616710ecee0d",
+        "width": "6",
+        "height": "1",
+        "label": "Status Server AWS",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Status Server",
+        "x": 1540,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "6b70f0904f7aab76",
+        "type": "function",
+        "z": "d3bafc4d888d1327",
+        "g": "214bb5bb7c3c748a",
+        "name": "Status Server",
+        "func": "var statusServer = global.get('statusServer','memoryOnly')||false;\nmsg.payload = statusServer;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 60,
+        "wires": [
+            [
+                "f3b2ec1800c00afd"
+            ]
         ]
     }
 ]
